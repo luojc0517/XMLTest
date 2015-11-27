@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * pull解析
+     * @param response
+     */
     private void parseXmlWithPull(String response) {
         try {
             XmlPullParserFactory xmlPullParserFactory = XmlPullParserFactory.newInstance();
@@ -107,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * SAX解析，需要用到自定义的WeatherHandler
+     * @param response
+     */
     private void parseXmlWithSAX(String response) {
         SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
         try {
